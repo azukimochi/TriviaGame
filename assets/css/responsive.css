@@ -1,0 +1,38 @@
+@media only screen and (max-width: 1100px) {
+    .outer-box {
+        height: 900px;
+    }
+    
+    .inner-box {
+        height: 800px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .outer-box {
+        height: 900px;
+    }
+    
+    .inner-box {
+        height: 700px;
+    }
+
+    img {
+        height: 400px;
+    }
+}
+
+@media only screen and (max-width: 590px) {
+    .outer-box {
+        height: 850px;
+    }
+    
+    .inner-box {
+        height: 650px;
+    }
+    
+    img {
+        height: 300px;
+    }
+}
+

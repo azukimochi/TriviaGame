@@ -38,12 +38,16 @@
 
 #image {
     height: auto;
+
 }
 
 img {
     height: 500px;
     bottom: 93px;
     position: relative;
+    margin-left: 10%;
+    margin-right: 10%; 
+    width: 75%;
 }
 
 .choices {

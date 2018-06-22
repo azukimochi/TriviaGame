@@ -48,7 +48,7 @@ function questionNumOne() {
         answer2: "Fantasy War Tactics",
         answer3: "Ingress",
         answer4: "Turf Wars",
-        image: '<img src="./assets/images/pokemongo.jpg">',
+        image: '<img src="./assets/images/pokemongo.png">',
         winnerText: "The correct answer is Pokemon Go!",
         bgColour: " #ff4d4d"
     }
