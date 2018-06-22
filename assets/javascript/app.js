@@ -28,7 +28,7 @@ function timer() {
 }
  
 function countDown() {
-    timerOn = setInterval(timer, 750);
+    timerOn = setInterval(timer, 1000);
 }
 
 var allQuestions = [ 
