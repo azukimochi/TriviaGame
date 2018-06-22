@@ -2,7 +2,7 @@ var questionObj;
 var correctAnswer = "";
 var userGuess = "";
 var i = 0;
-var count = 10;
+var count = 30;
 var wins = 0;
 var losses = 0;
 var unanswered = 0;
@@ -17,17 +17,18 @@ function timer() {
             clearInterval(timerOn);
             i++;
             $("#response").text("Time's up! You didn't answer!");
+            $(".outer-box").css("background-color", questionObj.bgColour);
             $("#question").text(questionObj.winnerText);
             $(".choices").text("");
             $("#image").prepend(questionObj.image);
             unanswered++;
             console.log("Num of unanswered " + unanswered);
-            setTimeout(allQuestions[i], 1000);            
+            setTimeout(allQuestions[i], 3500);            
     } 
 }
  
 function countDown() {
-    timerOn = setInterval(timer, 500);
+    timerOn = setInterval(timer, 750);
 }
 
 var allQuestions = [ 
@@ -40,18 +41,18 @@ var allQuestions = [
 ]
 
 
-
 function questionNumOne() {
      questionObj = {
-        question: "Which instrument has forty-seven strings and seven pedals?",
-        answer1: "Harp",
-        answer2: "Cello",
-        answer3: "Piano",
-        answer4: "Flute",
-        image: '<img src="./assets/images/test.jpg">',
-        winnerText: "The correct answer is the HARP!",
+        question: "Which mobile game was flagged as a cause of several armed robbies due to the game's GPS feature?",
+        answer1: "Pokemon Go",
+        answer2: "Fantasy War Tactics",
+        answer3: "Ingress",
+        answer4: "Turf Wars",
+        image: '<img src="./assets/images/pokemongo.jpg">',
+        winnerText: "The correct answer is Pokemon Go!",
+        bgColour: " #ff4d4d"
     }
-    $("#timer").text("Time Remaining: 10 seconds");
+    $("#timer").text("Time Remaining: 30 seconds");
     $("#response").text("");
     $("#question").text(questionObj.question);
     $("#answer1").text(questionObj.answer1);
@@ -60,21 +61,22 @@ function questionNumOne() {
     $("#answer4").text(questionObj.answer4);
     $("#image").html("");
     correctAnswer = questionObj.answer1;
-    count = 10;
+    count = 30;
     countDown();
 }
 
 function questionNumTwo() {
     questionObj = {
-       question: "Which fruit is considered to be the King of Fruits?",
-       answer1: "Mango",
-       answer2: "Lychee",
-       answer3: "Durian",
-       answer4: "Tomato",
-       image: '<img src="./assets/images/test.jpg">',
-       winnerText: "The correct answer is DURIAN!",
+       question: "Shinkai Makoto, the director of the hit anime film, Your Name, created which short film in the early 2000s that brought him international acclaim?",
+       answer1: "Hoshi wo Ou Kodomo (Children Who Chase Lost Voices)",
+       answer2: "5 Centimeters per Second",
+       answer3: "Hoshi no Koe (Voices of a Distant Star)",
+       answer4: "Koto noh a no Niwa (Garden of Words)",
+       image: '<img src="./assets/images/hoshinokoe.jpg">',
+       winnerText: "The correct answer is Hoshi no Koe (Voices of a Distant Star)!",
+       bgColour: "#ffa366"
    }
-   $("#timer").text("Time Remaining: 10 seconds");
+   $("#timer").text("Time Remaining: 30 seconds");
    $("#response").text("");
    $("#question").text(questionObj.question);
    $("#answer1").text(questionObj.answer1);
@@ -83,21 +85,22 @@ function questionNumTwo() {
    $("#answer4").text(questionObj.answer4);
    $("#image").html("");
    correctAnswer = questionObj.answer3;
-   count = 10;
+   count = 30;
    countDown();
 }
 
 function questionNumThree() {
     questionObj = {
-       question: "What is a group of ravens known as?",
-       answer1: "A flock",
-       answer2: "A swarm",
-       answer3: "A pack",
-       answer4: "An unkindness",
-       image: '<img src="./assets/images/test.jpg">',
-       winnerText: "The correct answer is an UNKINDNESS!",
+       question: "In Avengers: Infinity War, which mass retail chian does Okoye want in Wakanda?",
+       answer1: "Chatime",
+       answer2: "McDonald's",
+       answer3: "Nordstrom",
+       answer4: "Starbucks",
+       image: '<img src="./assets/images/starbucks.png">',
+       winnerText: "The correct answer is an Starbucks!",
+       bgColour: "#8cd98c"
    }
-   $("#timer").text("Time Remaining: 10 seconds");
+   $("#timer").text("Time Remaining: 30 seconds");
    $("#response").text("");
    $("#question").text(questionObj.question);
    $("#answer1").text(questionObj.answer1);
@@ -106,7 +109,7 @@ function questionNumThree() {
    $("#answer4").text(questionObj.answer4);
    $("#image").html("");
    correctAnswer = questionObj.answer4;
-   count = 10;
+   count = 30;
    countDown();
 }
 
@@ -117,10 +120,11 @@ function questionNumFour() {
        answer2: "Sanrio",
        answer3: "Subaru",
        answer4: "Samsung",
-       image: '<img src="./assets/images/test.jpg">',
+       image: '<img src="./assets/images/gudetama.png">',
        winnerText: "The correct answer is SANRIO!",
+       bgColour: "#ffeb99"
    }
-   $("#timer").text("Time Remaining: 10 seconds");
+   $("#timer").text("Time Remaining: 30 seconds");
    $("#response").text("");
    $("#question").text(questionObj.question);
    $("#answer1").text(questionObj.answer1);
@@ -129,7 +133,7 @@ function questionNumFour() {
    $("#answer4").text(questionObj.answer4);
    $("#image").html("");
    correctAnswer = questionObj.answer2;
-   count = 10;
+   count = 30;
    countDown();
 }
 
@@ -140,10 +144,11 @@ function questionNumFive() {
        answer2: "T-pose meme",
        answer3: "Disintergration meme",
        answer4: "Pepe the Frog meme",
-       image: '<img src="./assets/images/test.jpg">',
+       image: '<img src="./assets/images/lossmeme.jpg">',
        winnerText: "The correct answer is the Loss meme!",
+       bgColour: "#668cff"
    }
-   $("#timer").text("Time Remaining: 10 seconds");
+   $("#timer").text("Time Remaining: 30 seconds");
    $("#response").text("");
    $("#question").text(questionObj.question);
    $("#answer1").text(questionObj.answer1);
@@ -152,18 +157,18 @@ function questionNumFive() {
    $("#answer4").text(questionObj.answer4);
    $("#image").html("");
    correctAnswer = questionObj.answer1;
-   count = 10;
+   count = 30;
    countDown();
 }
 
 function results() {
     $("#timer").text("");
-    $("#response").text("Your results are in!");
+    $("#response").text("YOUR RESULTS ARE IN!");
     $("#question").text("");
     $("#result-correct").text("Correct: " + wins);
     $("#result-incorrect").text("Incorrect: " + losses);
     $("#result-unanswered").text("Unanswered: " + unanswered);
-    $("#restart").text("Would you like to play again?");
+    $("#restart").text("PLAY AGAIN?");
     $("#image").html("");
 }
 //end of declaration of variables and functions
@@ -186,6 +191,7 @@ $(document).ready(function() {
             $("#image").prepend(questionObj.image);
             wins++;
             console.log("Yes");
+            $(".outer-box").css("background-color", questionObj.bgColour);
         } else  {
             $("#response").text("Wrong!");
             $("#question").text(questionObj.winnerText);
@@ -193,9 +199,10 @@ $(document).ready(function() {
             $("#image").prepend(questionObj.image);
             losses++;
             console.log("No");
+            $(".outer-box").css("background-color", questionObj.bgColour);
         }
         clearInterval(timerOn);
-        setTimeout(allQuestions[i], 1000);
+        setTimeout(allQuestions[i], 3500);
     });
 
     $("#answer2").click(function() {
@@ -209,6 +216,7 @@ $(document).ready(function() {
             $("#image").prepend(questionObj.image);
             wins++;
             console.log("Yes");
+            $(".outer-box").css("background-color", questionObj.bgColour);
         } else  {
             $("#response").text("Wrong!");
             $("#question").text(questionObj.winnerText);
@@ -216,9 +224,10 @@ $(document).ready(function() {
             $("#image").prepend(questionObj.image);
             losses++;
             console.log("No");
+            $(".outer-box").css("background-color", questionObj.bgColour);
         }
         clearInterval(timerOn);
-        setTimeout(allQuestions[i], 1000);
+        setTimeout(allQuestions[i], 3500);
     });
 
     $("#answer3").click(function() {
@@ -232,6 +241,7 @@ $(document).ready(function() {
             $("#image").prepend(questionObj.image);
             wins++;
             console.log("Yes");
+            $(".outer-box").css("background-color", questionObj.bgColour);
         } else  {
             $("#response").text("Wrong!");
             $("#question").text(questionObj.winnerText);
@@ -239,9 +249,10 @@ $(document).ready(function() {
             $("#image").prepend(questionObj.image);
             losses++;
             console.log("No");
+            $(".outer-box").css("background-color", questionObj.bgColour);
         }
         clearInterval(timerOn);
-        setTimeout(allQuestions[i], 1000);
+        setTimeout(allQuestions[i], 3500);
     });
 
     $("#answer4").click(function() {
@@ -255,6 +266,7 @@ $(document).ready(function() {
             $("#image").prepend(questionObj.image);
             wins++;
             console.log("Yes");
+            $(".outer-box").css("background-color", questionObj.bgColour);
         } else  {
             $("#response").text("Wrong!");
             $("#question").text(questionObj.winnerText);
@@ -262,9 +274,10 @@ $(document).ready(function() {
             $("#image").prepend(questionObj.image);
             losses++;
             console.log("No");
+            $(".outer-box").css("background-color", questionObj.bgColour);
         }
         clearInterval(timerOn);
-        setTimeout(allQuestions[i], 1000);
+        setTimeout(allQuestions[i], 3500);
     });
 
     $("#restart").click(function() {
@@ -274,6 +287,7 @@ $(document).ready(function() {
         $("#result-incorrect").text("");
         $("#result-unanswered").text("");
         $("#restart").text("");
+        $(".outer-box").css("background-color", "#ccb3ff");
         i = 0;
         wins = 0;
         losses = 0;

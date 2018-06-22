@@ -1,27 +1,73 @@
 .outer-box {
-    background-color: lightpink;
+    background-color: #ccb3ff;
     width: 70%;
-    height: 500px;
+    height: 800px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
     padding: 5%;
+    border-style: dotted;
+    border-color: white;
+    border-width: 3px;
+    color: white;
+    font-family: 'Black Ops One', cursive;
+    font-size: 60px;
 }
 
 .inner-box {
-    background-color: lightblue;
-    height: 400px;
+    background-color: grey;
+    height: 700px;
     margin-top: 5%;
+    opacity: 0.5;
+    border-style: dotted;
+    border-color: white;
+    border-width: 3px;
+    font-size: 20px;
+    padding: 10px;
+    position: relative;
 }
 
 #timer {
     margin-bottom: 10px;
+    font-size: 50px;
 }
 
 #question {
     margin-bottom: 10px;
 }
 
-img {
-    width: 50%;
+#image {
+    height: auto;
 }
+
+img {
+    height: 500px;
+    bottom: 93px;
+    position: relative;
+}
+
+.choices {
+    margin-top: 25px;    
+}
+
+#start {
+    font-size: 70px;
+}
+
+#start:hover {
+    background-color: slateblue;
+}
+
+.choices:hover {
+    background-color: slateblue;
+}
+
+#restart {
+    font-size: 70px;
+}
+
+#restart:hover {
+    background-color: slateblue;
+}
+
+
